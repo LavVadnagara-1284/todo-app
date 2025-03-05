@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+/* Page Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Heading */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Input and Button Styling */
+input {
+    width: 250px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #64ffda;
+    border-radius: 8px;
+    background: transparent;
+    color: #000000;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #ffcc00;
+}
+
+/* Add Button */
+.addBtn {
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.addBtn:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Task List */
+.task-list {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #112240;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    width: 300px;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.task-list:hover {
+    background: #0d1b2a;
+}
+
+/* Task ID */
+.task-list li:first-child {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Edit Button */
+.editBtn {
+    background: #ffcc00;
+    color: #000000;
+    border: none;
+    padding: 5px 10px 1px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.editBtn:hover {
+    background: #ff9900;
+    transform: scale(1.1);
+}
+
+/* Delete Button */
+.deleteBtn {
+    background: #ff4c4c;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 1px 10px 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.deleteBtn:hover {
+    background: #ff0000;
+    transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+    input {
+        width: 200px;
+    }
+
+    .task-list {
+        width: 250px;
+    }
+}
+
+
+.task-list li:nth-child(2) {
+    flex: 1; /* Allow it to take available space */
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word; /* Ensure words break if too long */
+    max-width: 180px; /* Optional: Set max width to prevent overflow */
+}
